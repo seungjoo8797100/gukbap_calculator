@@ -2,7 +2,7 @@ package 국밥계산기;
 import java.util.Scanner;
 
 public class GC {
-    private String text;
+    private static String text;
     public static void main(String[] args) {
         int bowl;
         Scanner sc = new Scanner(System.in);
@@ -23,6 +23,9 @@ public class GC {
         }
         if(food >= 100000000) {
             text = "그 돈이면 차라리 국밥집을 하나 사고말지";
+        }
+        if(gukbap <= 0 || food <= 0) {
+            text = "어디서 장난질이야";
         }
        System.out.println(text);
     }
